@@ -1,0 +1,15 @@
+.skip-menu>a{
+  border: solid 2px #00004a;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 1.4rem;
+  background-color: #00004a;
+  color: #fff;
+  position: fixed;
+  left:-9999px;
+  top: 0;
+  z-index: 1000;
+}
+.skip-menu>a:focus{
+  left:0;
+}
