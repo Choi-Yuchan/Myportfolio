@@ -32,9 +32,8 @@
   <link rel="stylesheet" href="css/pcstyle.css">
   <!-- font -->
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&family=Rubik:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
+  <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
 
-  </style>
 
 </head>
 <body>
@@ -77,6 +76,78 @@
         <section class="section" id="about">
           <h2 class="main-title">About me</h2>
           <div class="underline"></div>
+          <div class="about-contents">
+            <article class="myintro">
+              <p class="main-text"> 저는 다양한 경험을 바탕으로 유저의 니즈를 파악하고 이해하는데 능하며,
+                도전을 두려워하지 않고 배우고자 하는 의지가 강하여 항상 성장해 나가는 
+                웹 퍼블리셔입니다.</p>
+            </article>
+            <article class="myskill">
+              <h3 class="sub-title">My Skills</h3>
+              <div class="skill-bar">
+                <div class="status-bar">
+                  <p class="skill sub-text">HTML</p>
+                  <div class="bar">
+                    <div class="status" id="html"></div>
+                  </div>
+                </div>
+                <div class="status-bar">
+                  <p class="skill sub-text">CSS</p>
+                  <div class="bar">
+                    <div class="status" id="css"></div>
+                  </div>
+                </div> 
+                <div class="status-bar">
+                  <p class="skill sub-text">JavaScript</p>
+                  <div class="bar">
+                    <div class="status" id="javascript"></div>
+                  </div>
+                </div>  
+                <div class="status-bar">
+                  <p class="skill sub-text">JQuery</p>
+                  <div class="bar">
+                    <div class="status" id="jquery"></div>
+                  </div>
+                </div>  
+                <div class="status-bar">
+                  <p class="skill sub-text">Photoshop</p>
+                  <div class="bar">
+                    <div class="status" id="photoshop"></div>
+                  </div>
+                </div>  
+                <div class="status-bar">
+                  <p class="skill sub-text">Illustrator</p>
+                  <div class="bar">
+                    <div class="status" id="illustrator"></div>
+                  </div>
+                </div>     
+              </div>
+            </article>
+            <article class="education">
+              <h3 class="sub-title">Education</h3>
+              <p class="sub-text">
+                국제 컴퓨터 아카데미<br>
+                스마트기기 UI/UX 웹퍼블리셔 과정
+              </p>
+              <p class="sub-text">
+                Greystone College <br>
+                Customer service course
+              </p>
+              <p class="sub-text">
+                세종대학교 <br>
+                외식경영학과 전공
+              </p>
+            </article>
+            <article class="certificate">
+              <h3 class="sub-title">Certificates</h3>
+              <p class="sub-text">ICDL advanced certificates</p>
+              <p class="sub-text">상공회의소 IT Plus Level 2</p>
+              <p class="sub-text">반려동물관리사</p>
+              <p class="sub-text">워드프로세서 2급</p>
+              <p class="sub-text">컴퓨터활용능력 2급</p>
+              <p class="sub-text">바둑 아마 初단</p>
+            </article>
+          </div>
         </section>
         <!-- MyWork section -->
         <section class="section" id="mywork">
@@ -96,22 +167,20 @@
     </footer>
   </div>
   <script>
-    //     document.addEventListener('scroll', function() {
-    //     var currentScrollValue = document.documentElement.scrollTop;
-    //     console.log('currentScrollValue is ' + currentScrollValue);
-    // });
   //side-navigation
   //Window Scroll event
-    let scrTop = document.documentElement.scrollTop;
+    let scrTop ;
     let introHeight = document.getElementById('intro').offsetHeight;
 
-    window.addEventListener('scroll', showAside);
+    window.onscroll = function(){showAside()};
 
     function showAside(){
       let aside = document.querySelector('.side-nav');
-
+      scrTop = document.documentElement.scrollTop;
       if(introHeight - scrTop <=0){
         aside.classList.add('show');
+      }else{
+        aside.classList.remove('show');
       }
     }
  

@@ -14,6 +14,7 @@ body{
 }
 .section {
   height: 100vh;
+  margin-bottom: 5%;
 }
 .port-box{
   height: 100vh;
@@ -22,18 +23,20 @@ body{
 
 /* Text style */
 .main-title{
-font-size: 4.5rem;
+font-size: 3rem;
 text-shadow: #ddd 5px 5px 0.1em,#ddd 0 0 3px;
 }
 .sub-title{
-  font-size: 1.875rem;
+  font-size: 1.5rem;
   font-weight: 600;
 }
 .main-text{
-  font-size: 1.5rem;line-height: 1.25;
+  font-size: 1.125rem;line-height: 1.25;
+  color: rgba(255, 255, 255, 0.8);
 } 
 .sub-text{
-  font-size: 1.125rem; line-height: 1.4;
+  font-size: 0.8rem; line-height: 1.4;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 /* Underline */
@@ -42,7 +45,7 @@ text-shadow: #ddd 5px 5px 0.1em,#ddd 0 0 3px;
   height: 3px;
   width: 300px;
   background-color: #ddd;
-  box-shadow: #ddd 5px 5px 0.1em,#ddd 0 0 3px;
+  box-shadow: #ddd 2px 2px 3px,#ddd 0 0 3px;
   margin: 20px 0;
 }
 
@@ -63,12 +66,16 @@ text-shadow: #ddd 5px 5px 0.1em,#ddd 0 0 3px;
 
 /* Intro section */
 #intro{
+  height: 100vh;
   background: no-repeat center/ 75% 62.5% url(../images/intro-background.jpg);
   display: flex;
   align-items: center;
 }
 #intro .intro-text{
   margin-left:13.125%;
+}
+.intro-text .main-title{
+  font-size: 4.5rem;
 }
 .intro-text p{
   font-size: 2.25rem;
@@ -77,18 +84,31 @@ text-shadow: #ddd 5px 5px 0.1em,#ddd 0 0 3px;
 
 /* Side-navigation */
 .side-nav{
-  display: none;
+  overflow: hidden;
   width: 11.5625%;
   height: 100vh;
   position: fixed;
   top: 0;
   right: 0;
-  background: black no-repeat center / 100% url(../images/nav-background.jpg);
-  transition: 0.3s;
+  background: black no-repeat center / 100% url(../images/nav-background.jpg); 
+  visibility: hidden;
 }
-.side-nav.show{
-  display: block;
+/* side-nav effect */
+.show{
+  animation-name: shownav;
+  animation-duration: 1s;
+  visibility: visible; 
 }
+
+@keyframes shownav{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
 .side-nav-bar{
   display: flex;
   flex-direction: column;
@@ -110,6 +130,76 @@ text-shadow: #ddd 5px 5px 0.1em,#ddd 0 0 3px;
 }
 
 /* About */
-#about{
- height: 100vh;
+#about .about-contents{
+  display: flex;
+  flex-flow: column wrap;
+  height: 100%;
+}
+
+.myintro{
+  width: 26.25%;
+  padding-bottom: 128px;
+}
+.myintro .main-text{
+  font-family: 'Jua';
+  line-height: 2.66;
+}
+  /* Myskill */
+.myskill{
+  width:26.25%;
+}
+.myskill .sub-title{
+  margin-bottom: 1.2rem;
+}
+  /* skill-bar */
+.skill-bar{
+  display: flex;
+  flex-direction: column;
+}
+.status-bar{
+  display: flex;
+  justify-content: space-between;
+  margin:15px 0;
+}
+.status-bar .skill{
+  flex: 0.5;
+  text-align: right;
+  padding-right: 1rem;
+}
+.bar{
+  flex: 3;
+  height: 1.125rem;
+  background-color: white;
+  margin:3.5px 0;
+}
+.status{
+  background-color: #bcbcbc;
+  width: 95%;
+  height: 1.125rem;
+  z-index: 2;  
+}
+#javascript{
+  width: 90%;
+}
+#jquery{
+  width: 80%;
+}
+#photoshop, #illustrator{
+  width: 87%;
+}
+
+/* Myskill-education */
+.education{
+  margin-right: 30%;
+  height: 34vh;
+}
+.education .sub-text{
+  margin: 1rem 0;
+}
+/* Myskill-certificates */
+.certificate{
+  height: 40vh;
+}
+.certificate .sub-text{
+  margin: 1rem 0 1.5rem;
 }
