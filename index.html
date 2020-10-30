@@ -23,103 +23,72 @@
   <source src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js" type="javaScript">
   <!-- Fontawesome   -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-  <!-- Fullpage -->
-  <link rel="stylesheet" href="./css/fullpage.min.css" />
-  <script src="./js/fullpage.min.js"></script>
-  <script defer src="./js/full.js"></script> 
+
+
   <!-- CSS -->
-  <link rel="stylesheet" href="./css/skip.css">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="css/skip.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/tabletstyle.css">
+  <link rel="stylesheet" href="css/pcstyle.css">
   <!-- font -->
-  <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Sansita+Swashed:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&family=Rubik:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
 
   </style>
 
 </head>
 <body>
+  <!-- Skip-menu -->
   <div class="skip-menu">
     <a href="#intro">Intro</a>
-      <a href="#about">About</a>
-      <a href="#skill">Skill</a>
-      <a href="#portfolio">Portfolio</a>
+      <a href="#about">AboutMe</a>
+      <a href="#portfolio">MyWork</a>
       <a href="#contact">Contact</a>
   </div>
-  <div class="wrap">
-    <header>
-      <div class="hamburger">
-        <i class="fa fa-bars" aria-hidden="true"></i>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="#intro">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skill">Skill</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contact">Contact</a></li>
+  <div class="wrapper">
+    <!-- Main -->
+    <section class="main-section">
+      <!-- Side-navigation -->
+      <nav class="side-nav">
+        <ul class="side-nav-bar">
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">My Work</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
         </ul>
       </nav>
-    </header>
-    <section class="main-section">
       <div id="fullpage">
-        <div class="section" id="intro">
-          <h1>I'm Yuchan Choi.</h1>
-          <p>Growing Web publisher.</p>
-        </div>
-
-        <div class="section" id="about">
-          <h2>About</h2>
-          <div class="img-box">
-            <img src="./images/snow-5369752_1920.jpg" alt="myPhoto">
+        <!-- Intro -->
+        <section class="section" id="intro">
+          <div class="intro-text">
+            <h1 class="main-title">I'm Yuchan Choi.</h1>
+            <p>Growing Web publisher.</p>
           </div>
-          <div class="text-box">
-            <h4>Choi Yuchan</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, sunt. 
-              Dolore ratione numquam, quae illo accusantium deleniti dolor aperiam deserunt
-              aspernatur, consectetur qui nesciunt reprehenderit eligendi quia sunt vero saepe!
-            </p>
-            <br>
-            <h4>Education</h4>
-            <p>
-              Web publisher course<br>
-              Gukje Computer Academy, Seoul Korea
-            </p>
-            <p>Customer service Diploma (Co-op)<br>         
-              Greystone College, Vancouver BC Canada</p>  
-            <p>Food service industry management Degree<br>
-              Sejong University, Seoul Korea</p>
-            <br>
-            <h4>Work experience</h4>
-            <p>Lath Enterprises Ltd 2019-2020</p>
-            <p>Coupang 2017-2018</p>
-            <p>Pohas 2016-2017</p>
-
-          </div>
+        </section>
+        <!-- About Me section-->
+        <section class="section" id="about">
+          <h2 class="main-title">About me</h2>
+          <div class="underline"></div>
+        </section>
+        <!-- MyWork section -->
+        <section class="section" id="mywork">
+          <div class="port-box" id="indigo"></div>
+          <div class="port-box" id="wcb"></div>
+          <div class="port-box" id="hansol"></div>
+          <div class="port-box" id="baiks"></div>
+          <div class="port-box" id="hollys"></div>
         </div>
-
-        <div class="section" id="skill">
-          <h2>Skill</h2>
-        </div>
-
-        <div class="section" id="portfolio">
-          <h2>Portfolio</h2>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-
-        <div class="section" id="contact">
-          <h2>Contact</h2>
-          <br>
-          <h4><i class="fa fa-map-marker" aria-hidden="true"></i>&emsp;Seoul, KR </h4>
-          <h4><i class="fa fa-envelope" aria-hidden="true"></i>&emsp;cor330@gmail.com</h4>
-          <h4><i class="fa fa-mobile" aria-hidden="true"></i>&emsp;010-7162-9282 </h4>
-        </div>
+        <!-- Contact -->
+        <section class="section" id="contact">
+        </section>
       </div>
     </section>
     <footer>
@@ -127,20 +96,26 @@
     </footer>
   </div>
   <script>
-    //navigation event
-    let hamburger = document.querySelector('.hamburger');
-    let nav = document.querySelector('nav');
+    //     document.addEventListener('scroll', function() {
+    //     var currentScrollValue = document.documentElement.scrollTop;
+    //     console.log('currentScrollValue is ' + currentScrollValue);
+    // });
+  //side-navigation
+  //Window Scroll event
+    let scrTop = document.documentElement.scrollTop;
+    let introHeight = document.getElementById('intro').offsetHeight;
 
-    hamburger.addEventListener('click', show);
+    window.addEventListener('scroll', showAside);
 
-    function show(){
-      nav.style.display = 'block';
-      hamburger.style.display = 'none';
+    function showAside(){
+      let aside = document.querySelector('.side-nav');
+
+      if(introHeight - scrTop <=0){
+        aside.classList.add('show');
+      }
     }
+ 
 
-    window.addEventListener('scroll', function(){
-      
-    })
   </script>
 
 </body>
