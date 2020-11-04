@@ -29,11 +29,15 @@
   <link rel="stylesheet" href="css/skip.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/tabletstyle.css">
-  <link rel="stylesheet" href="css/pcstyle.css">
+  <link rel="stylesheet" href="css/mobilestyle.css">
   <!-- font -->
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&family=Rubik:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Stylish&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poor+Story&family=Song+Myung&family=Sunflower:wght@300;500;700&display=swap" rel="stylesheet">
 
+    <!-- MyJavaScript -->
+  <script async src="./js/portfolio.js"></script>
 
 </head>
 <body>
@@ -51,19 +55,37 @@
       <nav class="side-nav">
         <ul class="side-nav-bar">
           <li>
-            <a href="#intro">Home</a>
+            <a href="#intro">
+              <i class="fa fa-home" aria-hidden="true"></i>
+              <p class="sub-text">Home</p>
+            </a>
           </li>
           <li>
-            <a href="#about">About</a>
+            <a href="#about">
+              <i class="fa fa-user" aria-hidden="true"></i>
+              <p class="sub-text">About me</p>
+            </a>
           </li>
           <li>
-            <a href="#mywork">My Work</a>
+            <a href="#mywork">
+              <i class="fa fa-file" aria-hidden="true"></i>
+              <p class="sub-text">My work</p>
+            </a>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <a href="#contact">
+              <i class="fa fa-mobile" aria-hidden="true"></i>
+              <p class="sub-text">Contact</p>
+            </a>
           </li>
         </ul>
       </nav>
+      <!-- Hamburger menu -->
+        <div class="toggle-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       <div id="fullpage">
         <!-- Intro -->
         <section class="section" id="intro">
@@ -82,6 +104,34 @@
                 도전을 두려워하지 않고 배우고자 하는 의지가 강하여 항상 성장해 나가는 
                 웹 퍼블리셔입니다.</p>
             </article>
+
+            <article class="edu">
+              <article class="education">
+                <h3 class="sub-title">Education</h3>
+                <p class="sub-text">
+                  국제 컴퓨터 아카데미<br>
+                  스마트기기 UI/UX 웹퍼블리셔 과정
+                </p>
+                <p class="sub-text">
+                  Greystone College <br>
+                  Customer service course
+                </p>
+                <p class="sub-text">
+                  세종대학교 <br>
+                  외식경영학과 전공
+                </p>
+              </article>
+              <article class="certificate">
+                <h3 class="sub-title">Certificates</h3>
+                <p class="sub-text">ICDL advanced certificates</p>
+                <p class="sub-text">상공회의소 IT Plus Level 2</p>
+                <p class="sub-text">반려동물관리사</p>
+                <p class="sub-text">워드프로세서 2급</p>
+                <p class="sub-text">컴퓨터활용능력 2급</p>
+                <p class="sub-text">바둑 아마 初단</p>
+              </article>
+            </article>
+
             <article class="myskill">
               <h3 class="sub-title">My Skills</h3>
               <div class="skill-bar">
@@ -120,45 +170,34 @@
                   <div class="bar">
                     <div class="status" id="illustrator"></div>
                   </div>
-                </div>     
+                </div>
+                <div class="status-bar">
+                  <p class="skill sub-text">Bootstrap</p>
+                  <div class="bar">
+                    <div class="status" id="bootstrap"></div>
+                  </div>
+                </div> 
+                <div class="status-bar">
+                  <p class="skill sub-text">OA</p>
+                  <div class="bar">
+                    <div class="status" id="office"></div>
+                  </div>
+                </div>      
               </div>
-            </article>
-            <article class="education">
-              <h3 class="sub-title">Education</h3>
-              <p class="sub-text">
-                국제 컴퓨터 아카데미<br>
-                스마트기기 UI/UX 웹퍼블리셔 과정
-              </p>
-              <p class="sub-text">
-                Greystone College <br>
-                Customer service course
-              </p>
-              <p class="sub-text">
-                세종대학교 <br>
-                외식경영학과 전공
-              </p>
-            </article>
-            <article class="certificate">
-              <h3 class="sub-title">Certificates</h3>
-              <p class="sub-text">ICDL advanced certificates</p>
-              <p class="sub-text">상공회의소 IT Plus Level 2</p>
-              <p class="sub-text">반려동물관리사</p>
-              <p class="sub-text">워드프로세서 2급</p>
-              <p class="sub-text">컴퓨터활용능력 2급</p>
-              <p class="sub-text">바둑 아마 初단</p>
             </article>
           </div>
         </section>
         <!-- MyWork section -->
         <section class="section" id="mywork">
-          <h2 class="main-title">My Work</h2>
-          <div class="underline"></div>
+          <div class="sticky-title">
+            <h2 class="main-title">My Work</h2>
+            <div class="underline"></div>
+          </div>
           <div class="port-box" id="indigo">
             <div class="image-box">
               <img src="./images/indigo-mockup.jpg" alt="Indigo">
               <div class="btn-box">
-                <a href="#" class="btn">Website</a>
-                <a href="#" class="btn">Mobile</a>
+                <a href="https://choi-yuchan.github.io/Indigo/" class="btn" target="_blank">WEBSITE</a>
               </div>
             </div>
             <div class="description">
@@ -200,8 +239,7 @@
             <div class="image-box">
               <img src="./images/wcbcafe-mockup.jpg" alt="wcbcafe">
               <div class="btn-box">
-                <a href="#" class="btn">Website</a>
-                <a href="#" class="btn">Mobile</a>
+                <a href="https://choi-yuchan.github.io/wcbcafe/" class="btn">WEBSITE</a>
               </div>
             </div>
             <div class="description">
@@ -243,13 +281,12 @@
             <div class="image-box">
               <img src="./images/hansol-mockup.jpg" alt="hansol">
               <div class="btn-box">
-                <a href="#" class="btn">Website</a>
-                <a href="#" class="btn">Mobile</a>
+                <a href="https://choi-yuchan.github.io/Hansolpaper/" class="btn">WEBSITE</a>
               </div>
             </div>
             <div class="description">
               <div class="work-tit">
-                <h3 class="main-text02">한솔제지</h3>
+                <h3 class="main-text02">Hansolpaper</h3>
                 <p class="sub-text02">Responsive webpage</p>
               </div>
               <div class="work-txt">
@@ -282,17 +319,16 @@
               </div>
             </div>
           </div>
-          <div class="port-box" id="baiks">
+          <div class="port-box" id="paiks">
             <div class="image-box">
               <img src="./images/baiks-mockup.jpg" alt="baiks">
               <div class="btn-box">
-                <a href="#" class="btn">Website</a>
-                <a href="#" class="btn">Mobile</a>
+                <a href="https://choi-yuchan.github.io/Baikscoffee/" class="btn">WEBSITE</a>
               </div>
             </div>
             <div class="description">
               <div class="work-tit">
-                <h3 class="main-text02">빽다방</h3>
+                <h3 class="main-text02">Paik's coffee</h3>
                 <p class="sub-text02">Adaptive webpage</p>
               </div>
               <div class="work-txt">
@@ -329,13 +365,12 @@
             <div class="image-box">
               <img src="./images/hollys-mockup.jpg" alt="hollys">
               <div class="btn-box">
-                <a href="#" class="btn">Website</a>
-                <a href="#" class="btn">Mobile</a>
+                <a href="https://choi-yuchan.github.io/Hollys/" class="btn">WEBSITE</a>
               </div>
             </div>
             <div class="description">
               <div class="work-tit">
-                <h3 class="main-text02">할리스 커피</h3>
+                <h3 class="main-text02">Hollys Coffee</h3>
                 <p class="sub-text02">Renewal webpage</p>
               </div>
               <div class="work-txt">
@@ -392,53 +427,16 @@
           <div class="message">
             <form action="send-me" method="get">
               <p>Let's get in touch. Send me a message.</p>
-              <input type="text" value="Name" placeholder="Name">
-              <input type="text" value="E-mail" placeholder="E-mail">
-              <input type="text" value="Subject" placeholder="Subject">
-              <input type="text" value="Message" placeholder="Message">
+              <input type="text" placeholder="Name">
+              <input type="text" placeholder="E-mail">
+              <input type="text" placeholder="Subject">
+              <input type="text" placeholder="Message">
               <button class="send-btn"><i class="fa fa-paper-plane" aria-hidden="true"></i> Send</button>
             </form>
           </div>
         </section>
       </div>
     </section>
-    <footer>
-
-    </footer>
   </div>
-  <script>
-  //side-navigation
-  //Window Scroll event
-    let scrTop ;
-    let introHeight = document.getElementById('intro').offsetHeight;
-
-    window.onscroll = function(){showAside()};
-
-    function showAside(){
-      let aside = document.querySelector('.side-nav');
-      scrTop = document.documentElement.scrollTop;
-      if(introHeight - scrTop <=0){
-        aside.classList.add('show');
-      }else{
-        aside.classList.remove('show');
-      }
-    }
- 
-  // Color block
-  let colorBlock = document.querySelector('.color-bl');
-  let color = document.querySelectorAll('.color');
-  let colorCode = document.querySelectorAll('.color-code');
-
-  function fillColor() {
-    for(var i=0;i<color.length;i++){
-      color[i].style.backgroundColor=colorCode[i].textContent;
-    }    
-  }
-
-fillColor();
-
-
-  </script>
-
 </body>
 </html>

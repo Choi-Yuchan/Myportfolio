@@ -1,0 +1,181 @@
+/* Mobile Wide Size */
+@media (max-width: 767px){
+  /* side navigation */
+  .side-nav{
+    display: none;
+    width: 13%;
+    z-index: 2;
+    background: black;
+    box-shadow: -2px 0px 0.5em #bdbdbd;
+  }
+  .side-nav-bar {
+    margin-top: 40px;
+    justify-content: space-evenly;
+    height: 100%;
+  }
+  .side-nav-bar li{
+    border-bottom: #3e3e3e 1px solid;
+  }
+  .side-nav-bar li:hover{
+    background: #f1f1f1;
+  }
+  .side-nav-bar a{
+    line-height: 3.3;
+  }
+  .side-nav-bar a p{
+    margin-top: 0;
+  }
+  .toggle-btn{
+    display: block;
+    z-index: 2;
+  }
+  /* button */
+  .btn{
+    width: 80px;
+    height: 30px;
+  }
+  .btn-box a {
+    font-size: 0.8rem;
+    line-height: 2rem;
+  }
+
+  /* about */
+  #about .about-contents{
+    flex-direction: row;
+  }
+  .myintro{
+    width: 80%;
+    padding-bottom: 10%;
+  }
+  .edu{
+    width: 80%;
+  }
+  .education{
+    width: 60%;
+  }
+  .myskill{
+    width: 80%;
+  }
+
+  /* mywork */
+  #mywork{
+    margin-top: 50%;
+  }
+  .port-box{
+    flex-direction: column;
+  }
+  .image-box img{
+    margin-top: 10%;
+  }
+  .btn-box{
+    bottom: 15%;
+  }
+  .work-tit h3, .work-txt h3,.colors h3{
+    margin-bottom: 0;
+  }
+  .work-tit h3{
+    font-size: 2rem;
+  }
+  .work-tit, .work-txt,.colors{
+    display: flex;
+    align-items: center;
+    padding-left: 18%;
+  }
+  .description .work-txt{
+    flex: 1;
+  }
+  .description .colors{
+    flex: 1;
+  }
+  .description .main-text02,.description .sub-text02,.color-bl-box{
+    padding: 1rem;
+  }
+
+  /* contact */
+  #contact{
+    margin-top:20%;
+  }
+  #contact .message{
+    width: 70%;
+  }
+  .message .send-btn{
+    padding: 8px 25px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile Standard */
+@media (max-width:479px){
+  .section{
+    margin-bottom: 20%;
+  }
+  .side-nav{
+    width: 100%;
+    height: 100%;
+  }
+  /* Text */
+  .main-text,
+  .main-text02{
+    font-size: 1rem;
+  }
+  .sub-text02{
+    font-size: 0.8rem;
+  }
+  /* side navigation */
+  .side-nav-bar{
+    margin-top: 0;
+  }
+  .side-nav-bar li{
+    border: none;
+    padding-top:8%;
+    height: 20%;
+  }
+  .side-nav-bar a{
+    line-height: 2;
+  }
+  .side-nav-bar li:hover{
+    background: #f1f1f1;
+  }
+
+    /* about */
+  #about{
+    height: auto;
+  }
+
+  .myintro{
+    width: 90%;
+  }
+  .edu{
+    height: 50vh;
+    width: 95%;
+    margin: 15% 0;
+  }
+  .myskill{
+    width: 90%;
+    margin-right: 0;
+  }
+  .status-bar .skill{
+    flex: 1;
+  }
+  /* mywork */
+  .description .main-text02,.description .sub-text02,.color-bl-box{
+    padding:0;
+    padding-right: 1rem;
+  }
+
+  .work-tit, .work-txt,.colors{
+    padding-left: 0;
+  }
+  .work-tit h3{
+    font-size: 1.3rem;
+  }
+ 
+  .colors h3{
+    margin-right: 23px;
+  }
+
+  /* contact */
+  #contact .message{
+    width: 90%;
+  }
+}

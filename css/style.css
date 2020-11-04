@@ -18,15 +18,12 @@ body{
   margin-bottom: 5%;
 }
 
-.port-box{
-  height: 100vh;
-}
 /* 1 column size : 6.5625% gap: 20px */
 
 /* Text style */
 .main-title{
 font-size: 3rem;
-text-shadow: #ddd 5px 5px 0.1em,#ddd 0 0 3px;
+text-shadow: #ddd 2px 2px 0.1em;
 }
 .sub-title{
   font-size: 1.5rem;
@@ -47,29 +44,32 @@ text-shadow: #ddd 5px 5px 0.1em,#ddd 0 0 3px;
   font-size: 1.5rem;
   color: rgba(255, 255, 255, 0.6);
 }
+
 /* Underline */
 .underline{
   display: block;
   height: 3px;
-  width: 300px;
+  width: 230px;
   background-color: #ddd;
   box-shadow: #ddd 2px 2px 3px,#ddd 0 0 3px;
   margin: 20px 0;
 }
 
-/* Button */
+/* Button basic style*/
 .btn{
   width: 126px;
   height: 54px;
   background: black;
   box-shadow:  2px 2px 8px #bcbcbc, -2px -2px 8px #fefefe;
   color: white;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 .btn:hover{
   background: white;
-  color: black;
+  color: #3d3d3d;
+  border:#929292 inset 3px;
 }
+
 
 /* ------------------------------------------------------------------- */
 
@@ -94,14 +94,16 @@ text-shadow: #ddd 5px 5px 0.1em,#ddd 0 0 3px;
 /* Side-navigation */
 .side-nav{
   overflow: hidden;
-  width: 11.5625%;
+  width: 8.75%;
   height: 100vh;
   position: fixed;
   top: 0;
   right: 0;
-  background: black no-repeat center / 100% url(../images/nav-background02.jpg); 
+  background: #1f1f1f; 
   visibility: hidden;
+  z-index: 3;
 }
+
 /* side-nav effect */
 .show{
   animation-name: shownav;
@@ -123,21 +125,165 @@ text-shadow: #ddd 5px 5px 0.1em,#ddd 0 0 3px;
   flex-direction: column;
   justify-content: space-around;
   margin-top:5%;
-  height: 70vh;
+  height: 80%;
 }
 .side-nav-bar li{
   text-align: center;
   width: 100%;
+  height: 100%;
+  padding-top: 35%;
 }
 .side-nav-bar a{
   color: white;
-  font-size: 2.5rem;
+  font-size: 1rem;
   text-shadow: #1f1f1f 3px 3px 0.2em,#3e3e3e -3px -3px 0.2em;
 }
-.side-nav-bar li:hover a{
-  text-decoration: underline;
+.side-nav-bar a i{
+  font-size: 2.5rem;
+}
+.side-nav-bar li:last-child i{
+  font-size: 3.5rem;
 }
 
+.side-nav-bar li:hover{
+  background-color: #f1f1f1;
+}
+.side-nav-bar li:hover a{
+  text-shadow: none;
+  color: #1f1f1f;
+}
+.side-nav-bar li:hover p{
+  color: #1f1f1f;
+}
+
+.side-nav-bar a p{
+  margin-top: .8rem;
+}
+/* toggle button style */
+.toggle-btn{
+  cursor: pointer;
+  position: fixed;
+  top: 5%;
+  right: 5%;
+  display: none;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.toggle-btn span{
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+}
+span + span{
+  margin-top: 5px;
+}
+
+.active span:nth-child(1) {
+  animation: ease .7s top forwards;
+}
+
+.not-active span:nth-child(1) {
+  animation: ease .7s top-2 forwards;
+}
+
+.active span:nth-child(2) {
+  animation: ease .7s scaled forwards;
+}
+
+.not-active span:nth-child(2) {
+  animation: ease .7s scaled-2 forwards;
+}
+
+.active span:nth-child(3) {
+  animation: ease .7s bottom forwards;
+}
+
+.not-active span:nth-child(3) {
+  animation: ease .7s bottom-2 forwards;
+}
+
+@keyframes top {
+  0% {
+    top: 0;
+    transform: rotate(0);
+  }
+  50% {
+    top: 8px;
+    transform: rotate(0);
+  }
+  100% {
+    top: 8px;
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes top-2 {
+  0% {
+    top: 8px;
+    transform: rotate(45deg);
+  }
+  50% {
+    top: 8px;
+    transform: rotate(0deg);
+  }
+  100% {
+    top: 0;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes bottom {
+  0% {
+    bottom: 0;
+    transform: rotate(0);
+  }
+  50% {
+    bottom: 8px;
+    transform: rotate(0);
+  }
+  100% {
+    bottom: 8px;
+    transform: rotate(135deg);
+  }
+}
+
+@keyframes bottom-2 {
+  0% {
+    bottom: 8px;
+    transform: rotate(135deg);
+  }
+  50% {
+    bottom: 8px;
+    transform: rotate(0);
+  }
+  100% {
+    bottom: 0;
+    transform: rotate(0);
+  }
+}
+
+@keyframes scaled {
+  50% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes scaled-2 {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 /* ------------------------------------------------------------------- */
 
 /* About */
@@ -152,15 +298,35 @@ text-shadow: #ddd 5px 5px 0.1em,#ddd 0 0 3px;
 
 .myintro{
   width: 26.25%;
-  padding-bottom: 128px;
+  padding-bottom: 8%;
 }
 .myintro .main-text{
-  font-family: 'Jua';
-  line-height: 2.66;
+  padding-top: 8%;
+  line-height: 2;
 }
+.edu{
+  display: flex;
+  height: 40vh;
+}
+/* education */
+.education{
+  width: 45%;
+}
+.education .sub-text{
+  margin: 1rem 0;
+  line-height: 2;
+}
+/* certificates */
+
+.certificate .sub-text{
+  margin: 1rem 0 1.5rem;
+}
+
   /* Myskill */
 .myskill{
-  width:26.25%;
+  width:30%;
+  margin-right: 10%;
+  padding-top: 2%;
 }
 .myskill .sub-title{
   margin-bottom: 1.2rem;
@@ -187,7 +353,7 @@ text-shadow: #ddd 5px 5px 0.1em,#ddd 0 0 3px;
   margin:3.5px 0;
 }
 .status{
-  background-color: #bcbcbc;
+  background-color: #929292;
   width: 95%;
   height: 1.125rem;
   z-index: 2;  
@@ -201,29 +367,49 @@ text-shadow: #ddd 5px 5px 0.1em,#ddd 0 0 3px;
 #photoshop, #illustrator{
   width: 87%;
 }
-
-/* Myskill-education */
-.education{
-  margin-right: 30%;
-  height: 34vh;
+#bootstrap{
+  width: 82%;
 }
-.education .sub-text{
-  margin: 1rem 0;
-}
-/* Myskill-certificates */
-.certificate{
-  height: 40vh;
-}
-.certificate .sub-text{
-  margin: 1rem 0 1.5rem;
+#office{
+  width: 92%;
 }
 
 /* ------------------------------------------------------------------- */
 
 /* MyWork */
+#mywork{
+  position: relative;
+}
+#mywork .sticky-title{
+  position: sticky;
+  top: 9.8%;
+  left: 6.5625%;
+  z-index: 2;
+}
+
+/* sticky title effect */
+.hide{
+  animation-name: hide;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes hide{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    
+  }
+}
+
+
+/* ------------------------------------------------------------------- */
 .port-box{
   display: flex;
   justify-content: center;
+  height: 100vh;
 }
 .image-box{
   position: relative;
@@ -244,30 +430,36 @@ text-shadow: #ddd 5px 5px 0.1em,#ddd 0 0 3px;
 }
 .btn-box a{
   text-align: center;
-  font-weight: 600;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   line-height: 3.2rem;
   margin: 0 50px;
 }
 
 /* mywork-description */
 .description{
+  visibility: hidden;
   flex: 5;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: 2s;
 }
 .description .work-tit{
   flex: 1;
 }
 .description .work-txt{
-  flex: 1;
-}
-.description .colors{
   flex: 2;
 }
+.description .colors{
+  flex: 4;
+}
 
-.work-tit h3, .colors h3{
+.work-tit h3{
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 0.5em;
+} 
+.colors h3{
   margin-bottom: 1em;
 }
 .work-txt h3{
@@ -281,8 +473,8 @@ text-shadow: #ddd 5px 5px 0.1em,#ddd 0 0 3px;
   text-align: center;
 }
 .color{
-  width: 126px;
-  height: 70px;
+  width: 105px;
+  height: 60px;
   margin-right:20px;
 }
 .color-code{
@@ -290,6 +482,22 @@ text-shadow: #ddd 5px 5px 0.1em,#ddd 0 0 3px;
   margin-right: 20px;
 }
 
+/* show description event */
+.active{
+  animation: slideup;
+  animation-duration: 1.5s;
+  visibility: visible;
+}
+
+@keyframes slideup{
+  0%{opacity: 0;
+    transform: translateY(30%);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 /* Contact */
 #contact .contact-info{
@@ -320,8 +528,8 @@ text-shadow: #ddd 5px 5px 0.1em,#ddd 0 0 3px;
   border-style: inset;
 } 
 .message input::placeholder{
-  color: #333;
-  font-size: 1.125rem;
+  color: #929292;
+  font-size: 0.8rem;
 }
 .message .send-btn{
   cursor: pointer;

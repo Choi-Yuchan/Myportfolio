@@ -1,4 +1,69 @@
 /* Tablet Style */
-@media(min-width: 768px){
-
+@media(max-width: 1023px){
+  .main-text02{
+    font-size: 1.5rem;
+  } 
+  .sub-text02{
+    font-size: 1rem;
   }
+  .btn{
+    width: 100px;
+    height: 40px;
+  }
+
+  /* side-nav */
+.side-nav{
+  width: 10%;
+}
+.side-nav-bar a{
+  font-size: 1.6rem;
+}
+.side-nav-bar a i{
+  font-size: 2rem;
+}
+.side-nav-bar li{
+  padding-top: 50%;
+}
+
+/* about */
+.myintro{
+  width: 32.5%;
+}
+.myskill{
+  width: 32.5%;
+}
+
+
+/* MyWork */
+#mywork .sticky-title{
+  position: static;
+}
+.image-box{
+  flex: 1;
+}
+.image-box img{
+  margin-top: 20%;
+}
+.btn-box{
+  bottom: 50%;
+}
+.btn-box a{
+  font-size: 1rem;
+  line-height: 2.25rem;
+}
+.description{
+  flex: 1;
+}
+
+.color {
+  width: 50px;
+  height: 30px;
+}
+.color-code {
+  font-size: 0.8rem;
+}
+/* contact */
+#contact .message {
+  width: 45%;
+  }
+}
