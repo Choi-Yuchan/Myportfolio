@@ -1,23 +1,48 @@
 'use strict';
 
-  //side-navigation
   //Window Scroll event
   let scrTop ;
   let introHeight = document.getElementById('intro').offsetHeight;
    
   window.addEventListener('scroll', showAside);
-  
+  window.addEventListener('scroll', slideLeft);
+  window.addEventListener('scroll', slideRight);
 
+  //side-navigation
   function showAside(){
     let aside = document.querySelector('.side-nav');
     scrTop = document.documentElement.scrollTop;
-    if(introHeight - scrTop <=0){
+    if(introHeight - scrTop <= 0){
       aside.classList.add('show');
     }else{
       aside.classList.remove('show');
     }
   }
 
+  //slide-about-text effect 
+  function slideLeft(){
+    let myIntro = document.querySelector('.myintro');
+    let edu = document.querySelector('.edu');
+
+    scrTop = document.documentElement.scrollTop;
+    if(introHeight - scrTop <= 10){
+      myIntro.classList.add('leftslide');
+      edu.classList.add('leftslide');
+    }else{
+      myIntro.classList.remove('leftslide');
+      edu.classList.remove('leftslide');
+    }
+  }
+
+  function slideRight(){
+    let mySkill = document.querySelector('.myskill');
+    scrTop = document.documentElement.scrollTop;
+    if(introHeight - scrTop <= 10){
+      mySkill.classList.add('rightslide');
+    }else{
+      mySkill.classList.remove('rightslide');
+    }
+  }
   // mobile side navigation
 
   let mobileNav = function(){
@@ -56,7 +81,7 @@ window.addEventListener('scroll',unsticky);
 function unsticky(){
   scrTop = document.documentElement.scrollTop;
   let stickyTitle = document.querySelector('.sticky-title')
-  if (scrTop > 6000){
+  if (scrTop > 6549){
     stickyTitle.classList.add('hide');
   } else {
     stickyTitle.classList.remove('hide');

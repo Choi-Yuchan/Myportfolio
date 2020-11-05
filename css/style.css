@@ -60,14 +60,17 @@ text-shadow: #ddd 2px 2px 0.1em;
   width: 126px;
   height: 54px;
   background: black;
-  box-shadow:  2px 2px 8px #bcbcbc, -2px -2px 8px #fefefe;
+  box-shadow:  0.1em 0.1em 0.1em  #bcbcbc, -0.1em -0.1em 0.1em #fefefe;
   color: white;
   transition: 0.3s;
+  /* border: 1px solid #fefefe; */
 }
-.btn:hover{
-  background: white;
-  color: #3d3d3d;
-  border:#929292 inset 3px;
+.btn:hover, .btn:focus{
+  color: #fffec4;
+  border: #fffec4 1px solid;
+  box-shadow: 0 0.5em 0.5em -0.4em #fffec4;
+  transform: translateY(-0.25em);
+  
 }
 
 
@@ -304,10 +307,45 @@ span + span{
   padding-top: 8%;
   line-height: 2;
 }
+
+.leftslide{
+  visibility: visible;
+  animation-name: leftslide;
+  animation-duration: 3s;
+}
+
+@keyframes leftslide{
+  0%{
+    opacity: 0;
+    transform: translateX(-20%);
+  }
+  100%{
+    opacity: 1;
+   transform: translateX(0);
+  }
+}
+
+.rightslide{
+  animation-name: rightslide;
+  animation-duration: 3s;
+}
+@keyframes rightslide{
+  0%{
+    opacity: 0;
+    transform: translateX(20%);
+  }
+  100%{
+    opacity: 1;
+   transform: translateX(0);
+  }
+}
+
 .edu{
   display: flex;
   height: 40vh;
 }
+
+
 /* education */
 .education{
   width: 45%;
@@ -404,8 +442,6 @@ span + span{
   }
 }
 
-
-/* ------------------------------------------------------------------- */
 .port-box{
   display: flex;
   justify-content: center;
@@ -499,7 +535,11 @@ span + span{
   }
 }
 
+/* ------------------------------------------------------------------- */
 /* Contact */
+#contact{
+  margin-bottom:0 ;
+}
 #contact .contact-info{
   margin:30px 0;
 }
@@ -525,12 +565,13 @@ span + span{
   text-align: start;
   margin: 25px 0;
   padding: 1rem;
-  border-style: inset;
+  border: inset 2px #f1f1f1;
 } 
 .message input::placeholder{
   color: #929292;
   font-size: 0.8rem;
 }
+/* send button style */
 .message .send-btn{
   cursor: pointer;
   margin-top: 25px;
@@ -541,8 +582,14 @@ span + span{
   transition: 0.5s;
 }
 
-.send-btn:hover{
-  background-color: black;
-  color: white;
-  border: #ccc inset 3px;
+.send-btn:hover, .send-btn:focus{
+  box-shadow: inset 7em 0 0 0 black;
+  color: #f1f1f1;
+  border-style: inset;
+}
+
+/* footer */
+footer{
+  text-align: center;
+  padding-bottom: 2em;
 }
