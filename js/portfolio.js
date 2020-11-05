@@ -45,6 +45,10 @@
   }
   // mobile side navigation
 
+  // window.addEventListener('resize',function(){
+  //   if()
+  // })
+
   let mobileNav = function(){
     if (window.innerWidth < 768){
   window.addEventListener('load', function(){
@@ -73,20 +77,6 @@ function activeNav(){
   } 
 }  
 
-
-//mywork title effect
-
-window.addEventListener('scroll',unsticky);
-
-function unsticky(){
-  scrTop = document.documentElement.scrollTop;
-  let stickyTitle = document.querySelector('.sticky-title')
-  if (scrTop > 6549){
-    stickyTitle.classList.add('hide');
-  } else {
-    stickyTitle.classList.remove('hide');
-  }
-}
 
 // Description slide Effect  
   

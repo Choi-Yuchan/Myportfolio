@@ -418,29 +418,6 @@ span + span{
 #mywork{
   position: relative;
 }
-#mywork .sticky-title{
-  position: sticky;
-  top: 9.8%;
-  left: 6.5625%;
-  z-index: 2;
-}
-
-/* sticky title effect */
-.hide{
-  animation-name: hide;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes hide{
-  0%{
-    opacity: 1;
-  }
-  100%{
-    opacity: 0;
-    
-  }
-}
 
 .port-box{
   display: flex;
@@ -591,5 +568,5 @@ span + span{
 /* footer */
 footer{
   text-align: center;
-  padding-bottom: 2em;
+  padding: 2em 0;
 }

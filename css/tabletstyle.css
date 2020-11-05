@@ -35,9 +35,6 @@
 
 
 /* MyWork */
-#mywork .sticky-title{
-  position: static;
-}
 .image-box{
   flex: 1;
 }

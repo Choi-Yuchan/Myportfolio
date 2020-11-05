@@ -7,6 +7,7 @@
     z-index: 2;
     background: black;
     box-shadow: -2px 0px 0.5em #bdbdbd;
+    visibility: visible;
   }
   .side-nav-bar {
     margin-top: 40px;
