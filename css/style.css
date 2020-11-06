@@ -63,16 +63,61 @@ text-shadow: #ddd 2px 2px 0.1em;
   box-shadow:  0.1em 0.1em 0.1em  #bcbcbc, -0.1em -0.1em 0.1em #fefefe;
   color: white;
   transition: 0.3s;
-  /* border: 1px solid #fefefe; */
 }
 .btn:hover, .btn:focus{
   color: #fffec4;
   border: #fffec4 1px solid;
   box-shadow: 0 0.5em 0.5em -0.4em #fffec4;
   transform: translateY(-0.25em);
-  
 }
 
+.move-btn {
+  position: fixed;
+  left: 50%;
+  bottom: 10%;
+}
+.move-btn span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb 1.5s infinite;
+  animation: sdb 1.5s infinite;
+  box-sizing: border-box;
+}
+
+@-webkit-keyframes sdb {
+  0% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
+@keyframes sdb {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
 
 /* ------------------------------------------------------------------- */
 
@@ -534,7 +579,7 @@ span + span{
 }
 
 #contact .message{
-  width: 30%;
+  width: 33%;
   margin-top: 5%;
 }
 .message input{
